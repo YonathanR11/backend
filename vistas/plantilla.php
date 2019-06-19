@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -29,7 +32,8 @@
     && $_SESSION["iniciarSesion"] == "ok") {
 
       if (isset($_GET["ruta"])) {
-        if ($_GET["ruta"] == "Inicio" ||
+        if ($_GET["ruta"] == "Inicio" || 
+            $_GET["ruta"] == "cerrarSesion" ||
             $_GET["ruta"] == "Galeria") {
           
               include "modulos/".$_GET["ruta"].".php";

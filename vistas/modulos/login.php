@@ -8,7 +8,7 @@
                   <div class="form-group">
                     <label class="label">Usuario</label>
                     <div class="input-group">
-                      <input type="text" name="username" class="form-control" placeholder="Usuario">
+                      <input type="text" name="username" class="form-control" placeholder="Usuario" autocomplete="off">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>
@@ -19,7 +19,7 @@
                   <div class="form-group">
                     <label class="label">Contraseña</label>
                     <div class="input-group">
-                      <input type="password" name="password" class="form-control" placeholder="Contraseña">
+                      <input type="password" name="password" class="form-control" placeholder="Contraseña"  autocomplete="off">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>

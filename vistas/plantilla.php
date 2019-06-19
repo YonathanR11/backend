@@ -31,22 +31,24 @@ session_start();
     if (isset($_SESSION["iniciarSesion"]) 
     && $_SESSION["iniciarSesion"] == "ok") {
 
+      include "modulos/header.php";
       if (isset($_GET["ruta"])) {
         if ($_GET["ruta"] == "Inicio" || 
             $_GET["ruta"] == "cerrarSesion" ||
             $_GET["ruta"] == "Galeria") {
           
               include "modulos/".$_GET["ruta"].".php";
-        }else{
+            }else{
               include "modulos/404.php";
-        }
-
-
-      }else{
-        include "modulos/Inicio.php";
-      }
-
-
+            }
+            
+            
+          }else{
+            include "modulos/Inicio.php";
+          }
+          
+          
+          include "modulos/footer.php";
     }else{
       include "modulos/login.php";
 

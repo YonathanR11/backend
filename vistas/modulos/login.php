@@ -4,11 +4,11 @@
           <div class="row w-100">
             <div class="col-lg-4 mx-auto">
               <div class="auto-form-wrapper">
-                <form action="#">
+                <form method="post" novalidate="">
                   <div class="form-group">
                     <label class="label">Usuario</label>
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Usuario">
+                      <input type="text" name="username" class="form-control" placeholder="Usuario">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>
@@ -19,7 +19,7 @@
                   <div class="form-group">
                     <label class="label">Contraseña</label>
                     <div class="input-group">
-                      <input type="password" class="form-control" placeholder="Contraseña">
+                      <input type="password" name="password" class="form-control" placeholder="Contraseña">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>
@@ -28,7 +28,11 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <button class="btn btn-primary submit-btn btn-block">Entrar</button>
+                    <?php
+                        $login = new ControladorUsuario();
+                        $login->ctrLoginUsuario();
+                    ?>
+                    <button type="summit" class="btn btn-primary submit-btn btn-block">Entrar</button>
                   </div>
                   
                   <div class="text-block text-center my-3">

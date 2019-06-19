@@ -25,7 +25,28 @@
   </head>
   <body>
     <?php
-    include "modulos/login.php";
+    if (isset($_SESSION["iniciarSesion"]) 
+    && $_SESSION["iniciarSesion"] == "ok") {
+
+      if (isset($_GET["ruta"])) {
+        if ($_GET["ruta"] == "Inicio" ||
+            $_GET["ruta"] == "Galeria") {
+          
+              include "modulos/".$_GET["ruta"].".php";
+        }else{
+              include "modulos/404.php";
+        }
+
+
+      }else{
+        include "modulos/Inicio.php";
+      }
+
+
+    }else{
+      include "modulos/login.php";
+
+    }
 
     ?>
     <!-- container-scroller -->

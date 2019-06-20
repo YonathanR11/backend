@@ -69,15 +69,15 @@
 
                     <div class="form-group">
                         <label for="titu">Titulo</label>
-                        <input type="text" name="titulo" class="form-control" id="titu" placeholder="Titulo">
+                        <input type="text" name="titulo" class="form-control" id="titu" placeholder="Titulo" autocomplete="off" require>
                       </div>
                     <div class="form-group">
                         <label for="descr">Descripcion</label>
-                        <input type="text" name="descripcion" class="form-control" id="descr" placeholder="Descripcion">
+                        <input type="text" name="descripcion" class="form-control" id="descr" placeholder="Descripcion"  autocomplete="off" require>
                       </div>
                   <div class="custom-file mt-3">
                       <label for="inputGroupFile02">Descripcion</label>
-                    <input type="file" class="custom-file-input" id="inputGroupFile02" name="inputGroupFile02" />
+                    <input type="file" class="custom-file-input" id="inputGroupFile02" name="inputGroupFile02" require/>
                     <label class="custom-file-label" for="inputGroupFile02">Seleccionar archivo...</label>
                   </div>
 

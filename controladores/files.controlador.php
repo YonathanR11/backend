@@ -3,12 +3,12 @@
 class ControladorFiles
 {
     //METODO PARA SUBIR LOS ARCHIVOS
-    public static function ctrUpFiles2()
+    public static function ctrUpFiles()
     {
         if (isset($_POST['titulo'])) {
             $tabla = "fotos";
             // $ruta = $_POST["ruta"];
-            $dir_subida = 'vistas/assets/images/img';
+            $dir_subida = 'vistas/assets/images/img/';
             $fichero_subido = $dir_subida . basename($_FILES['inputGroupFile02']['name']);
             if (move_uploaded_file($_FILES['inputGroupFile02']['tmp_name'], $fichero_subido)) {
                 $ruta = $fichero_subido;

@@ -92,7 +92,7 @@
           </div>
             <?php
             $nuevoFilew = new ControladorFiles();
-            $nuevoFilew -> ctrUpFiles2();
+            $nuevoFilew -> ctrUpFiles();
           ?>
           </div>
           
